@@ -45,6 +45,17 @@ One tap to activate. One tap to deactivate.
 - Removes dopamine triggers from colorful apps
 - Can auto-enable during Focus Modes
 
+### 6. Daily Intention
+
+- **Morning prompt:** "What's ONE thing that if you achieved today, you'd feel great?"
+- **Always visible** on home screen under the clock
+- **Evening check-in:** "How did it go?" (Complete / Partial / Didn't do it)
+- **History view:** See all past intentions and outcomes
+- **Streak tracking:** How many days you completed your intention
+- **Weekly review:** See your wins from the past week
+
+This keeps users focused on what matters most - not their phone.
+
 ---
 
 ## Development Phases
@@ -52,22 +63,28 @@ One tap to activate. One tap to deactivate.
 ### Phase 1: Core (Weeks 1-2)
 - [ ] 5-app home screen limit
 - [ ] Swipe up for all apps
-- [ ] Emergency Only mode
+- [ ] Daily Intention (morning prompt + home screen display)
 
 ### Phase 2: Blocking (Weeks 3-4)
+- [ ] Emergency Only mode
 - [ ] App blocking with timer
-- [ ] Work Mode & Reading Mode
 - [ ] Break Glass unlock
 
-### Phase 3: Intelligence (Weeks 5-6)
+### Phase 3: Focus Modes (Weeks 5-6)
+- [ ] Work Mode & Reading Mode
 - [ ] Daily time limits per app
+- [ ] Evening check-in for Daily Intention
+
+### Phase 4: Intelligence (Weeks 7-8)
 - [ ] Usage statistics dashboard
+- [ ] Intention history & streaks
 - [ ] Grayscale mode toggle
 
-### Phase 4: Polish (Weeks 7-8)
+### Phase 5: Polish (Weeks 9-10)
 - [ ] Sleep Mode with scheduling
 - [ ] Custom Mode builder
 - [ ] Share stats to social media
+- [ ] Weekly review of intentions
 
 ---
 
@@ -88,7 +105,8 @@ One tap to activate. One tap to deactivate.
 2. **Actually blocks apps** - Real friction, not just tracking
 3. **Beautiful** - Screenshot-worthy minimal design
 4. **Shareable stats** - Users show off their "time saved"
-5. **Solves real pain** - Phone addiction is epidemic
+5. **Daily Intention** - Turns your phone into a productivity tool
+6. **Solves real pain** - Phone addiction is epidemic
 
 ---
 
