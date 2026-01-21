@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinimalistLauncher - Download</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 500px;
+        }
+        .logo {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        .tagline {
+            font-size: 1.1rem;
+            color: #a0a0a0;
+            margin-bottom: 40px;
+        }
+        .features {
+            text-align: left;
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+        }
+        .features li {
+            list-style: none;
+            padding: 8px 0;
+            color: #ccc;
+        }
+        .features li::before {
+            content: "✓ ";
+            color: #4ade80;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 18px 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(74, 222, 128, 0.3);
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(74, 222, 128, 0.4);
+        }
+        .version {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .instructions {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+        .instructions h3 {
+            color: #fff;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .instructions ol {
+            text-align: left;
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin: 8px 0;
+        }
+        .github-link {
+            margin-top: 30px;
+        }
+        .github-link a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .github-link a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">📱</div>
+        <h1>MinimalistLauncher</h1>
+        <p class="tagline">Break phone addiction. Focus on what matters.</p>
+
+        <ul class="features">
+            <li>5-app minimal home screen</li>
+            <li>Daily intention setting</li>
+            <li>Focus modes (Work, Reading, Sleep)</li>
+            <li>App blocking with timer</li>
+            <li>Usage statistics</li>
+            <li>Accountability partner</li>
+        </ul>
+
+        <a href="https://github.com/waleedsatti/MinimalistLauncher/releases/download/v1.0.0/app-release.apk" class="download-btn">
+            Download APK
+        </a>
+        <p class="version">Version 1.0.0 • 16 MB</p>
+
+        <div class="instructions">
+            <h3>Installation</h3>
+            <ol>
+                <li>Download the APK file</li>
+                <li>Open it on your Android device</li>
+                <li>Allow "Install from unknown sources" if prompted</li>
+                <li>Follow the installation steps</li>
+                <li>Set as your default launcher</li>
+            </ol>
+        </div>
+
+        <div class="github-link">
+            <a href="https://github.com/waleedsatti/MinimalistLauncher">View source on GitHub</a>
+        </div>
+    </div>
+</body>
+</html>
