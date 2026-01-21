@@ -95,6 +95,56 @@ One tap to activate. One tap to deactivate.
 
 This keeps users focused on what matters most - not their phone.
 
+### 7. Accountability Partner
+
+Add a friend who can see your progress. Gentle social pressure that actually works.
+
+**What your partner sees:**
+```
+┌─────────────────────────────────────┐
+│  SARAH'S PROGRESS TODAY             │
+│                                     │
+│  📱 Phone-free:     4h 32m          │
+│  🚫 No social media: 6h 15m         │
+│  ✓ Daily intention: "Go to gym"     │
+│                                     │
+│  Status: Crushing it today!         │
+│                                     │
+│  [Send encouragement 💪]            │
+└─────────────────────────────────────┘
+```
+
+**What you see:**
+```
+┌─────────────────────────────────────┐
+│  YOUR ACCOUNTABILITY PARTNER        │
+│                                     │
+│  👤 Mike is watching your progress  │
+│                                     │
+│  Today:                             │
+│  📱 Phone-free:     2h 10m          │
+│  🚫 No social media: 3h 45m         │
+│  ◐ Daily intention: In progress     │
+│                                     │
+│  Mike says: "You got this! 💪"      │
+└─────────────────────────────────────┘
+```
+
+**Features:**
+- Invite a friend via link/SMS
+- See each other's real-time progress
+- Send encouragement messages
+- Get notified when partner achieves daily goal
+- Weekly summary shared between partners
+- Optional: Multiple partners (small group)
+
+**Why this goes viral:**
+1. **Requires invites** → Friend downloads app to be your partner
+2. **Daily check-ins** → Both users open app regularly
+3. **Emotional connection** → People stick with apps that connect them
+4. **Actually works** → Social accountability is proven to change behavior
+5. **Shareable moments** → "My partner hit 8 hours phone-free!"
+
 ---
 
 ## Development Phases
@@ -119,7 +169,13 @@ This keeps users focused on what matters most - not their phone.
 - [ ] Intention history & streaks
 - [ ] Grayscale mode toggle
 
-### Phase 5: Polish (Weeks 9-10)
+### Phase 5: Social (Weeks 9-10)
+- [ ] Accountability Partner - invite friend
+- [ ] Real-time progress sharing
+- [ ] Send encouragement messages
+- [ ] Partner notifications
+
+### Phase 6: Polish (Weeks 11-12)
 - [ ] Sleep Mode with scheduling
 - [ ] Custom Mode builder
 - [ ] Share stats to social media
@@ -145,7 +201,8 @@ This keeps users focused on what matters most - not their phone.
 3. **Beautiful** - Screenshot-worthy minimal design
 4. **Shareable stats** - Users show off their "time saved"
 5. **Daily Intention** - Turns your phone into a productivity tool
-6. **Solves real pain** - Phone addiction is epidemic
+6. **Accountability Partner** - Forces invites = organic growth loop
+7. **Solves real pain** - Phone addiction is epidemic
 
 ---
 
