@@ -5,6 +5,11 @@
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
     <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
         android:protectionLevel="signature" tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"
+        tools:ignore="ProtectedPermissions" />
 
     <queries>
         <intent>
@@ -35,5 +40,28 @@
             <category android:name="android.intent.category.DEFAULT" />
         </intent-filter>
       </activity>
+
+      <!-- Blocking Activity -->
+      <activity
+        android:name=".BlockingActivity"
+        android:label="App Blocked"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:launchMode="singleTask"
+        android:excludeFromRecents="true"
+        android:exported="false" />
+
+      <!-- Accessibility Service for App Blocking -->
+      <service
+        android:name=".AppBlockingService"
+        android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+        android:exported="true">
+        <intent-filter>
+          <action android:name="android.accessibilityservice.AccessibilityService" />
+        </intent-filter>
+        <meta-data
+          android:name="android.accessibilityservice"
+          android:resource="@xml/accessibility_service_config" />
+      </service>
+
     </application>
 </manifest>

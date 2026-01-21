@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MinimalistLauncher</string>
+    <string name="accessibility_service_description">MinimalistLauncher uses this service to block distracting apps during Focus Mode. It monitors which app is in the foreground and shows a blocking screen when you try to open blocked apps.</string>
 </resources>
