@@ -1,97 +1,182 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Minimalist Launcher
 
-# Getting Started
+**Break your phone addiction. Reclaim your time.**
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+A clean, distraction-free Android launcher built with React Native. Designed to help you use your phone intentionally, not compulsively.
 
-## Step 1: Start Metro
+> **We're building the most powerful minimalist launcher.** See our [ROADMAP.md](ROADMAP.md) for upcoming features including Focus Modes, App Blocking, and Screen Time limits.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## Current Features
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- **Large Clock & Date Display** - Always know the time at a glance
+- **Text-Based App List** - Simple, alphabetically sorted list of all your apps
+- **Quick Access Favorites** - Pin up to 6 frequently used apps at the top
+- **App Usage Tracking** - See how many times you've opened each app
+- **Smart Search** - Quickly find apps by typing
+- **Minimalist Design** - Pure black background with white text for OLED screens
 
-```sh
-# Using npm
-npm start
+## Screenshots
 
-# OR using Yarn
-yarn start
+[Your launcher will look like this:]
+- Large centered clock at the top
+- Date displayed below clock
+- Quick Access section with your favorite apps
+- Search bar for filtering
+- Scrollable list of all installed apps
+- Usage counter for each app
+
+## Setup & Installation
+
+### Prerequisites
+
+- Node.js (v18 or later)
+- React Native development environment set up
+- Android SDK
+- Android device or emulator
+
+### Build Instructions
+
+1. **Navigate to the project directory:**
+   ```bash
+   cd MinimalistLauncher
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start Metro bundler:**
+   ```bash
+   npm start
+   ```
+
+4. **In a new terminal, run on Android:**
+   ```bash
+   npm run android
+   ```
+
+5. **Set as default launcher:**
+   - Press home button on your device
+   - Android will ask you to choose a launcher
+   - Select "MinimalistLauncher" and choose "Always"
+
+## Usage
+
+### Opening Apps
+- **Tap** on any app name to launch it
+
+### Managing Favorites
+- **Long press** on any app to add it to Quick Access (favorites)
+- **Long press** on a favorite to remove it from Quick Access
+- You can have up to 6 favorites
+
+### Searching Apps
+- Type in the search bar to filter apps by name
+- Search is case-insensitive
+
+### App Usage Stats
+- Each app shows how many times you've opened it
+- Counter increments every time you launch an app
+- Stats are persisted locally using AsyncStorage
+
+## Project Structure
+
+```
+MinimalistLauncher/
+├── App.tsx                          # Main launcher UI
+├── android/
+│   └── app/src/main/
+│       ├── AndroidManifest.xml      # Launcher permissions & intents
+│       └── java/com/minimalistlauncher/
+│           ├── RNInstalledApplicationModule.java    # Native module for app management
+│           └── RNInstalledApplicationPackage.java   # Package registration
+├── package.json
+└── README.md
 ```
 
-## Step 2: Build and run your app
+## Permissions
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+The launcher requires these permissions:
 
-### Android
+- `QUERY_ALL_PACKAGES` - To list all installed apps
+- `PACKAGE_USAGE_STATS` - To track app usage (optional, for future features)
 
-```sh
-# Using npm
-npm run android
+## Customization
 
-# OR using Yarn
-yarn android
+### Changing Colors
+Edit the `styles` object in `App.tsx`:
+- `backgroundColor: '#000000'` - Background color
+- `color: '#FFFFFF'` - Text color
+- `color: '#999999'` - Secondary text color
+
+### Changing Maximum Favorites
+In `App.tsx`, find this line:
+```typescript
+if (newFavorites.length < 6) {
 ```
+Change `6` to your desired maximum.
 
-### iOS
+### Clock Format
+The launcher uses 24-hour format. To change to 12-hour format, modify the `formatTime` function in `App.tsx`.
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+## Troubleshooting
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+### Apps not showing up
+- Make sure you've granted the QUERY_ALL_PACKAGES permission
+- Try restarting the app
 
-```sh
-bundle install
-```
+### Can't launch apps
+- Check that the native module is properly registered
+- Verify AndroidManifest.xml has the correct launcher intents
 
-Then, and every time you update your native dependencies, run:
+### Home button doesn't show launcher selection
+- Make sure the HOME and DEFAULT categories are in your intent-filter
+- Try clearing default launcher settings in Android settings
 
-```sh
-bundle exec pod install
-```
+## Building for Production
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+1. **Generate a release APK:**
+   ```bash
+   cd android
+   ./gradlew assembleRelease
+   ```
 
-```sh
-# Using npm
-npm run ios
+2. **Find your APK at:**
+   ```
+   android/app/build/outputs/apk/release/app-release.apk
+   ```
 
-# OR using Yarn
-yarn ios
-```
+3. **Sign the APK** (required for distribution)
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## Roadmap - Coming Soon
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+We're building powerful features to help you break phone addiction:
 
-## Step 3: Modify your app
+- **Focus Modes** - Emergency Only, Work Mode, Reading Mode, Sleep Mode
+- **App Blocking** - Block distracting apps for set periods
+- **Screen Time Limits** - Set daily limits per app
+- **Usage Dashboard** - See exactly where your time goes
+- **Grayscale Mode** - Remove color to reduce appeal
+- **5-App Home Screen** - Show only what matters
 
-Now that you have successfully run the app, let's make changes!
+**[See Full Roadmap](ROADMAP.md)** for all planned features and development timeline.
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## Tech Stack
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+- React Native 0.83.1
+- TypeScript
+- AsyncStorage for local data persistence
+- Native Android modules for app management
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+## License
 
-## Congratulations! :tada:
+MIT
 
-You've successfully run and modified your React Native App. :partying_face:
+## Contributing
 
-### Now what?
+Feel free to submit issues and pull requests!
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+---
 
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Built with React Native
