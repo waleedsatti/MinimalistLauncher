@@ -8,6 +8,7 @@ import {AllAppsScreen} from '../screens/AllAppsScreen';
 import {FocusModeScreen} from '../screens/FocusModeScreen';
 import {UsageStatsScreen} from '../screens/UsageStatsScreen';
 import {DailyIntentionScreen} from '../screens/DailyIntentionScreen';
+import {AccountabilityPartnerScreen} from '../screens/AccountabilityPartnerScreen';
 import {SettingsScreen} from '../screens/SettingsScreen';
 
 const Tab = createBottomTabNavigator();
@@ -76,6 +77,13 @@ export function AppNavigator() {
           component={UsageStatsScreen}
           options={{
             tabBarLabel: 'Stats',
+          }}
+        />
+        <Tab.Screen
+          name="PartnerTab"
+          component={AccountabilityPartnerScreen}
+          options={{
+            tabBarLabel: 'Partner',
           }}
         />
         <Tab.Screen
